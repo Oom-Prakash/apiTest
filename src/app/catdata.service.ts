@@ -5,12 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CatdataService {
-  
-  constructor(private http:HttpClient) {}
-  getData()
-  {
-   return this.http.get('https://jsonplaceholder.typicode.com/todos');
+
+  constructor(private http: HttpClient) { }
+  getData() {
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
-  
+
 }
 

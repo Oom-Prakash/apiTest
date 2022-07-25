@@ -8,16 +8,18 @@ import { CatdataService } from '../catdata.service';
 
 
 export class ApitestComponent implements OnInit {
-res=[]as any;
-constructor(public CatdataService : CatdataService){}
+
+  result!: any;
+
+  constructor(public CatdataService: CatdataService) { }
 
   ngOnInit(): void {
 
-    this.CatdataService.getData().subscribe((res)=>
-  {
-console.log(res);
-  });
-}
+    this.CatdataService.getData().subscribe((res) => {
+      console.log(res);
+this.result=res;
+    });
+  }
 
 }
 
